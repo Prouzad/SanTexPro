@@ -6,7 +6,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 const Header = () => {
 	return (
 		<>
-			<div className="w-full flex items-center  h-20 justify-center bg-white">
+			<div className="w-full flex items-center  h-20 justify-center bg-white lg:z-20">
 				<div className="w-4/5 max-w-screen-xl flex item-center justify-between">
 					<div className='w-48 flex items-center'>
 						<MenuIcon className='hidden lg:flex m-2'/>
