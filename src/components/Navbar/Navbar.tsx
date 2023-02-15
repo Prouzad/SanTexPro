@@ -31,7 +31,7 @@ const Navbar = () => {
 
 	return (
 		<div className={`w-full flex bg-white justify-center items-center p-2 text-lg pb-4 border-y-2
-		 border-stone-200 xl:text-sm lg:flex lg:h-screen lg:w-1/2 lg:z-10 lg:absolute lg:top-0  ${true ? 'lg:translate-x-full' : 'lg:-translate-x-full'}` }>
+		 border-stone-200 xl:text-sm lg:h-screen lg:w-1/2 lg:z-10 lg:absolute lg:top-0 lg:transition lg:-left-full ${false ? 'lg:left-0' : null}` }>
 			<nav className='w-4/5 max-w-screen-xl flex items-center lg:h-1/2'>
 				<ul className='w-3/6 flex text-black font-medium item-center justify-between lg:flex-col lg:h-full'>
 					{nav.map((item, idx) => {
@@ -40,7 +40,13 @@ const Navbar = () => {
 								<li key={idx} className='cursor-pointer hover:text-indigo-700 select-none flex items-center'>
 									<Link href={`/${item.link}`} passHref legacyBehavior>
 										<a className='flex items-center justify-center'>
-											{item.link === 'category' ? <MenuIcon className='lg:hidden' sx={{marginRight: '5px'}}/> : null}
+											{item.link === 'category' 
+											? 
+												<MenuIcon 
+													className='lg:hidden' 
+													sx={{marginRight: '5px'}}
+												/> 
+											: null}
 											{item.title}
 										</a>
 									</Link>
